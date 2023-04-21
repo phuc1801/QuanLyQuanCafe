@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{831438F0-54AD-4D26-9278-F62C607DF751}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyQuanCafe</RootNamespace>
+    <AssemblyName>QuanLyQuanCafe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cacform\Danhsachban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cacform\Danhsachban.Designer.cs">
+      <DependentUpon>Danhsachban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cacform\Danhmuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cacform\Danhmuc.Designer.cs">
+      <DependentUpon>Danhmuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cacform\Doanhthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cacform\Doanhthu.Designer.cs">
+      <DependentUpon>Doanhthu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\AccoutDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillinforDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\TableDAO.cs" />
+    <Compile Include="DTO\Bill.cs" />
+    <Compile Include="DTO\Billinfor.cs" />
+    <Compile Include="DTO\TableDTO.cs" />
+    <Compile Include="frmTableManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTableManager.Designer.cs">
+      <DependentUpon>frmTableManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cacform\Hoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cacform\Hoadon.Designer.cs">
+      <DependentUpon>Hoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="cacform\Thucdon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cacform\Thucdon.Designer.cs">
+      <DependentUpon>Thucdon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cacform\Taikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cacform\Taikhoan.Designer.cs">
+      <DependentUpon>Taikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cacform\Trangchu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cacform\Trangchu.Designer.cs">
+      <DependentUpon>Trangchu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="cacform\Danhmuc.resx">
+      <DependentUpon>Danhmuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cacform\Danhsachban.resx">
+      <DependentUpon>Danhsachban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cacform\Doanhthu.resx">
+      <DependentUpon>Doanhthu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cacform\Hoadon.resx">
+      <DependentUpon>Hoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cacform\Taikhoan.resx">
+      <DependentUpon>Taikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cacform\Thucdon.resx">
+      <DependentUpon>Thucdon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTableManager.resx">
+      <DependentUpon>frmTableManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="cacform\Trangchu.resx">
+      <DependentUpon>Trangchu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bootstrap 5 Pure css gradient and waves background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bootstrap 5 Pure css gradient and waves background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-25d-sense-of-science-and-technology-login-registration-picture-image_1322225.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-sign-icon-person-symbol-3033574.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-sign-icon-person-symbol-30335741.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-user-icon-isolated-on-abstract-background-png-image_1875037.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logocaffe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-logo-cafe-logo-design-inspiration-coffee-logo-cafe-logo-design-inspiration-186554240.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-design-over-blue-background-vector-2134290.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumb1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-945494696-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A_small_cup_of_coffee.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cafe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17369_1620976860.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_514517927_dXLi1DauUmrCaE3AkElsVgJ1jaYZMcSA.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
