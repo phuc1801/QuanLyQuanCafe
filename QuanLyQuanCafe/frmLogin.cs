@@ -18,44 +18,12 @@ namespace QuanLyQuanCafe
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            String userName = txtUsername.Text;
-            String passWord = txtPassword.Text;
-            if (Login(userName, passWord))
-            {
-                frmTableManager f = new frmTableManager();
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
-            }
-            else {
-                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
-            }
-            
-        }
-        bool Login(String userName, String passWord) {
-            return AccoutDAO.Instance.Login(userName, passWord); ;
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
+            frmTableManager f = new frmTableManager();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
     }
 }
