@@ -49,7 +49,7 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "QUẢN LÝ DOANH THU";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+          
             // 
             // label1
             // 
@@ -68,7 +68,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(255, 20);
             this.dateTimePicker1.TabIndex = 6;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+          
             // 
             // dateTimePicker2
             // 

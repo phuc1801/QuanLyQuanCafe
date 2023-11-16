@@ -78,7 +78,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(295, 593);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+           
             // 
             // pictureBox2
             // 
@@ -89,7 +89,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox1_Click);
+           
             // 
             // pictureBox1
             // 
@@ -100,7 +100,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+           
             // 
             // button2
             // 
@@ -136,7 +136,7 @@
             this.iBtnTDcafe.Size = new System.Drawing.Size(66, 51);
             this.iBtnTDcafe.TabIndex = 9;
             this.iBtnTDcafe.UseVisualStyleBackColor = false;
-            this.iBtnTDcafe.Click += new System.EventHandler(this.iconButton2_Click);
+           
             // 
             // textBox4
             // 
@@ -144,7 +144,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(182, 22);
             this.textBox4.TabIndex = 8;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            
             // 
             // label5
             // 
@@ -162,7 +162,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(182, 22);
             this.textBox3.TabIndex = 6;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+          
             // 
             // textBox2
             // 
@@ -170,7 +170,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(182, 22);
             this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+           
             // 
             // textBox1
             // 
@@ -178,7 +178,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(182, 22);
             this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+          
             // 
             // label4
             // 
@@ -211,7 +211,7 @@
             this.label2.Size = new System.Drawing.Size(71, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên món:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+          
             // 
             // label1
             // 
@@ -222,7 +222,7 @@
             this.label1.Size = new System.Drawing.Size(26, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+          
             // 
             // panel2
             // 

@@ -81,7 +81,7 @@
             this.label1.Size = new System.Drawing.Size(319, 55);
             this.label1.TabIndex = 0;
             this.label1.Text = "Coffee Home";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+           
             // 
             // panel2
             // 
@@ -119,7 +119,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "ODER NOW";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+           
             // 
             // label5
             // 
@@ -183,7 +183,7 @@
             this.iBtnTTstar.Text = "5";
             this.iBtnTTstar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.iBtnTTstar.UseVisualStyleBackColor = true;
-            this.iBtnTTstar.Click += new System.EventHandler(this.iBtnTTstar_Click);
+          
             // 
             // pictureBox1
             // 
@@ -194,7 +194,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+           
             // 
             // pictureBox2
             // 

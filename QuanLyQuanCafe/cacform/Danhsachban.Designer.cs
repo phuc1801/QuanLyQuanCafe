@@ -118,7 +118,7 @@
             this.label2.Size = new System.Drawing.Size(63, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên bàn:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+         
             // 
             // label1
             // 
@@ -130,7 +130,7 @@
             this.label1.Size = new System.Drawing.Size(24, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+           
             // 
             // panel2
             // 
@@ -181,7 +181,7 @@
             this.iBtnDSBsua.Text = "Sửa";
             this.iBtnDSBsua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iBtnDSBsua.UseVisualStyleBackColor = false;
-            this.iBtnDSBsua.Click += new System.EventHandler(this.iconButton3_Click);
+           
             // 
             // iBtnDSBxoa
             // 
@@ -201,7 +201,7 @@
             this.iBtnDSBxoa.Text = "Xoá";
             this.iBtnDSBxoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iBtnDSBxoa.UseVisualStyleBackColor = false;
-            this.iBtnDSBxoa.Click += new System.EventHandler(this.iconButton2_Click);
+           
             // 
             // iBtnDSBthem
             // 
@@ -221,8 +221,7 @@
             this.iBtnDSBthem.Text = "Thêm";
             this.iBtnDSBthem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iBtnDSBthem.UseVisualStyleBackColor = false;
-            this.iBtnDSBthem.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
+            
             // panel3
             // 
             this.panel3.Controls.Add(this.dataGridView1);
@@ -240,7 +239,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(610, 506);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+           
             // 
             // Danhsachban
             // 

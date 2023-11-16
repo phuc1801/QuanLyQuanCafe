@@ -71,14 +71,6 @@
     <Compile Include="cacform\Doanhthu.Designer.cs">
       <DependentUpon>Doanhthu.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAO\AccoutDAO.cs" />
-    <Compile Include="DAO\BillDAO.cs" />
-    <Compile Include="DAO\BillinforDAO.cs" />
-    <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="DAO\TableDAO.cs" />
-    <Compile Include="DTO\Bill.cs" />
-    <Compile Include="DTO\Billinfor.cs" />
-    <Compile Include="DTO\TableDTO.cs" />
     <Compile Include="frmTableManager.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using QuanLyQuanCafe.DAO;
+
 
 namespace QuanLyQuanCafe
 {
@@ -17,17 +17,7 @@ namespace QuanLyQuanCafe
         public Taikhoan()
         {
             InitializeComponent();
-            dgvAccount.DataSource = DataProvider.Instance.ExecuteQuery("Select * from Account");
-
-        }
-
-       
-
-
-
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
+          
 
         }
 

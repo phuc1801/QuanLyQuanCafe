@@ -121,7 +121,7 @@
             this.iBtnTKkhoa.Size = new System.Drawing.Size(127, 91);
             this.iBtnTKkhoa.TabIndex = 0;
             this.iBtnTKkhoa.UseVisualStyleBackColor = true;
-            this.iBtnTKkhoa.Click += new System.EventHandler(this.iconButton2_Click);
+          
             // 
             // iBtnTKviet
             // 
@@ -136,7 +136,7 @@
             this.iBtnTKviet.Size = new System.Drawing.Size(127, 91);
             this.iBtnTKviet.TabIndex = 0;
             this.iBtnTKviet.UseVisualStyleBackColor = true;
-            this.iBtnTKviet.Click += new System.EventHandler(this.iconButton2_Click);
+           
             // 
             // iBtnTKuser
             // 
