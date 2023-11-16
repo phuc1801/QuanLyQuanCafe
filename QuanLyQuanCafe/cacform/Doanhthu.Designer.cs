@@ -49,7 +49,6 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "QUẢN LÝ DOANH THU";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-          
             // 
             // label1
             // 
@@ -68,7 +67,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(255, 20);
             this.dateTimePicker1.TabIndex = 6;
-          
             // 
             // dateTimePicker2
             // 
@@ -91,17 +89,18 @@
             this.button1.BackColor = System.Drawing.Color.SkyBlue;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(660, 88);
+            this.button1.Location = new System.Drawing.Point(654, 91);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 44);
+            this.button1.Size = new System.Drawing.Size(125, 40);
             this.button1.TabIndex = 9;
             this.button1.Text = "Thống kê";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 154);

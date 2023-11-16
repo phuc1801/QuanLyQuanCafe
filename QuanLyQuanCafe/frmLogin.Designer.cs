@@ -123,9 +123,9 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnLogin.Location = new System.Drawing.Point(116, 482);
+            this.btnLogin.Location = new System.Drawing.Point(76, 477);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(174, 42);
+            this.btnLogin.Size = new System.Drawing.Size(240, 42);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -137,9 +137,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(116, 541);
+            this.button1.Location = new System.Drawing.Point(76, 536);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 42);
+            this.button1.Size = new System.Drawing.Size(240, 42);
             this.button1.TabIndex = 3;
             this.button1.Text = "Exit";
             this.button1.UseVisualStyleBackColor = false;

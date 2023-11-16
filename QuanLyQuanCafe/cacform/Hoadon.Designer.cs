@@ -32,6 +32,9 @@
             this.flptabFood = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listBill = new System.Windows.Forms.ListView();
+            this.IDfood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.iBtnHDcafe = new FontAwesome.Sharp.IconButton();
@@ -46,9 +49,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tBtnThanhtoan = new FontAwesome.Sharp.IconButton();
-            this.IDfood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -113,7 +113,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(298, 90);
+            this.numericUpDown1.Location = new System.Drawing.Point(312, 90);
             this.numericUpDown1.Minimum = new decimal(new int[] {
             100,
             0,
@@ -148,9 +148,9 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(199, 72);
+            this.button2.Location = new System.Drawing.Point(199, 79);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 52);
+            this.button2.Size = new System.Drawing.Size(82, 38);
             this.button2.TabIndex = 1;
             this.button2.Text = "Thêm món";
             this.button2.UseVisualStyleBackColor = false;
@@ -161,9 +161,9 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(280, 7);
+            this.button1.Location = new System.Drawing.Point(282, 14);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 52);
+            this.button1.Size = new System.Drawing.Size(82, 38);
             this.button1.TabIndex = 1;
             this.button1.Text = "Chuyển bàn";
             this.button1.UseVisualStyleBackColor = false;

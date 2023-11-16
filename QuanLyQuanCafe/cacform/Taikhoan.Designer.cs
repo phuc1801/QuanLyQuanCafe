@@ -85,7 +85,7 @@
             this.iBtnTKlink2.FlatAppearance.BorderSize = 0;
             this.iBtnTKlink2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iBtnTKlink2.IconChar = FontAwesome.Sharp.IconChar.Link;
-            this.iBtnTKlink2.IconColor = System.Drawing.Color.DarkSlateGray;
+            this.iBtnTKlink2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnTKlink2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iBtnTKlink2.IconSize = 100;
             this.iBtnTKlink2.Location = new System.Drawing.Point(535, 3);
@@ -99,7 +99,7 @@
             this.iBtnTKlink1.FlatAppearance.BorderSize = 0;
             this.iBtnTKlink1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iBtnTKlink1.IconChar = FontAwesome.Sharp.IconChar.Link;
-            this.iBtnTKlink1.IconColor = System.Drawing.Color.DarkSlateGray;
+            this.iBtnTKlink1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnTKlink1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iBtnTKlink1.IconSize = 100;
             this.iBtnTKlink1.Location = new System.Drawing.Point(237, 3);
@@ -113,7 +113,7 @@
             this.iBtnTKkhoa.FlatAppearance.BorderSize = 0;
             this.iBtnTKkhoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iBtnTKkhoa.IconChar = FontAwesome.Sharp.IconChar.UserShield;
-            this.iBtnTKkhoa.IconColor = System.Drawing.Color.DarkSlateGray;
+            this.iBtnTKkhoa.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnTKkhoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iBtnTKkhoa.IconSize = 100;
             this.iBtnTKkhoa.Location = new System.Drawing.Point(679, 3);
@@ -121,14 +121,13 @@
             this.iBtnTKkhoa.Size = new System.Drawing.Size(127, 91);
             this.iBtnTKkhoa.TabIndex = 0;
             this.iBtnTKkhoa.UseVisualStyleBackColor = true;
-          
             // 
             // iBtnTKviet
             // 
             this.iBtnTKviet.FlatAppearance.BorderSize = 0;
             this.iBtnTKviet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iBtnTKviet.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
-            this.iBtnTKviet.IconColor = System.Drawing.Color.DarkSlateGray;
+            this.iBtnTKviet.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnTKviet.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iBtnTKviet.IconSize = 100;
             this.iBtnTKviet.Location = new System.Drawing.Point(389, 3);
@@ -136,14 +135,13 @@
             this.iBtnTKviet.Size = new System.Drawing.Size(127, 91);
             this.iBtnTKviet.TabIndex = 0;
             this.iBtnTKviet.UseVisualStyleBackColor = true;
-           
             // 
             // iBtnTKuser
             // 
             this.iBtnTKuser.FlatAppearance.BorderSize = 0;
             this.iBtnTKuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iBtnTKuser.IconChar = FontAwesome.Sharp.IconChar.UserGroup;
-            this.iBtnTKuser.IconColor = System.Drawing.Color.DarkSlateGray;
+            this.iBtnTKuser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnTKuser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iBtnTKuser.IconSize = 100;
             this.iBtnTKuser.Location = new System.Drawing.Point(84, 3);
@@ -259,7 +257,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 100);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(569, 87);
+            this.panel3.Size = new System.Drawing.Size(569, 75);
             this.panel3.TabIndex = 4;
             // 
             // iBtnDSBxem
@@ -272,9 +270,9 @@
             this.iBtnDSBxem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnDSBxem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iBtnDSBxem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iBtnDSBxem.Location = new System.Drawing.Point(430, 6);
+            this.iBtnDSBxem.Location = new System.Drawing.Point(381, 6);
             this.iBtnDSBxem.Name = "iBtnDSBxem";
-            this.iBtnDSBxem.Size = new System.Drawing.Size(118, 69);
+            this.iBtnDSBxem.Size = new System.Drawing.Size(107, 56);
             this.iBtnDSBxem.TabIndex = 3;
             this.iBtnDSBxem.Text = "Xem";
             this.iBtnDSBxem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -290,9 +288,9 @@
             this.iBtnDSBsua.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnDSBsua.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iBtnDSBsua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iBtnDSBsua.Location = new System.Drawing.Point(289, 6);
+            this.iBtnDSBsua.Location = new System.Drawing.Point(258, 6);
             this.iBtnDSBsua.Name = "iBtnDSBsua";
-            this.iBtnDSBsua.Size = new System.Drawing.Size(118, 69);
+            this.iBtnDSBsua.Size = new System.Drawing.Size(107, 56);
             this.iBtnDSBsua.TabIndex = 2;
             this.iBtnDSBsua.Text = "Sửa";
             this.iBtnDSBsua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -308,9 +306,9 @@
             this.iBtnDSBxoa.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnDSBxoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iBtnDSBxoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iBtnDSBxoa.Location = new System.Drawing.Point(147, 6);
+            this.iBtnDSBxoa.Location = new System.Drawing.Point(134, 6);
             this.iBtnDSBxoa.Name = "iBtnDSBxoa";
-            this.iBtnDSBxoa.Size = new System.Drawing.Size(118, 69);
+            this.iBtnDSBxoa.Size = new System.Drawing.Size(107, 56);
             this.iBtnDSBxoa.TabIndex = 1;
             this.iBtnDSBxoa.Text = "Xoá";
             this.iBtnDSBxoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -328,7 +326,7 @@
             this.iBtnDSBthem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iBtnDSBthem.Location = new System.Drawing.Point(12, 6);
             this.iBtnDSBthem.Name = "iBtnDSBthem";
-            this.iBtnDSBthem.Size = new System.Drawing.Size(118, 69);
+            this.iBtnDSBthem.Size = new System.Drawing.Size(107, 56);
             this.iBtnDSBthem.TabIndex = 0;
             this.iBtnDSBthem.Text = "Thêm";
             this.iBtnDSBthem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -336,11 +334,12 @@
             // 
             // dgvAccount
             // 
+            this.dgvAccount.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAccount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAccount.Location = new System.Drawing.Point(0, 187);
+            this.dgvAccount.Location = new System.Drawing.Point(0, 175);
             this.dgvAccount.Name = "dgvAccount";
-            this.dgvAccount.Size = new System.Drawing.Size(569, 406);
+            this.dgvAccount.Size = new System.Drawing.Size(569, 418);
             this.dgvAccount.TabIndex = 5;
             // 
             // Taikhoan

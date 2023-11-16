@@ -26,6 +26,7 @@ namespace QuanLyQuanCafe
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
+            OpenChildForm(new Trangchu());
 
         }
         // seting cho iconbutton bat tat

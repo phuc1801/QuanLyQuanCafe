@@ -78,7 +78,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(295, 593);
             this.panel1.TabIndex = 1;
-           
             // 
             // pictureBox2
             // 
@@ -89,7 +88,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
-           
             // 
             // pictureBox1
             // 
@@ -100,18 +98,17 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-           
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.SkyBlue;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(207, 83);
+            this.button2.Location = new System.Drawing.Point(207, 94);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 44);
+            this.button2.Size = new System.Drawing.Size(66, 23);
             this.button2.TabIndex = 4;
             this.button2.Text = "Tìm";
             this.button2.UseVisualStyleBackColor = false;
@@ -136,7 +133,6 @@
             this.iBtnTDcafe.Size = new System.Drawing.Size(66, 51);
             this.iBtnTDcafe.TabIndex = 9;
             this.iBtnTDcafe.UseVisualStyleBackColor = false;
-           
             // 
             // textBox4
             // 
@@ -144,7 +140,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(182, 22);
             this.textBox4.TabIndex = 8;
-            
             // 
             // label5
             // 
@@ -162,7 +157,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(182, 22);
             this.textBox3.TabIndex = 6;
-          
             // 
             // textBox2
             // 
@@ -170,7 +164,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(182, 22);
             this.textBox2.TabIndex = 5;
-           
             // 
             // textBox1
             // 
@@ -178,7 +171,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(182, 22);
             this.textBox1.TabIndex = 4;
-          
             // 
             // label4
             // 
@@ -211,7 +203,6 @@
             this.label2.Size = new System.Drawing.Size(71, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên món:";
-          
             // 
             // label1
             // 
@@ -222,7 +213,6 @@
             this.label1.Size = new System.Drawing.Size(26, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID:";
-          
             // 
             // panel2
             // 
@@ -233,7 +223,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(623, 87);
+            this.panel2.Size = new System.Drawing.Size(623, 68);
             this.panel2.TabIndex = 2;
             // 
             // iBtnDSBxem
@@ -241,7 +231,7 @@
             this.iBtnDSBxem.BackColor = System.Drawing.Color.SkyBlue;
             this.iBtnDSBxem.FlatAppearance.BorderSize = 0;
             this.iBtnDSBxem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iBtnDSBxem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iBtnDSBxem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iBtnDSBxem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnDSBxem.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.iBtnDSBxem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -249,7 +239,7 @@
             this.iBtnDSBxem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iBtnDSBxem.Location = new System.Drawing.Point(453, 6);
             this.iBtnDSBxem.Name = "iBtnDSBxem";
-            this.iBtnDSBxem.Size = new System.Drawing.Size(118, 69);
+            this.iBtnDSBxem.Size = new System.Drawing.Size(118, 54);
             this.iBtnDSBxem.TabIndex = 3;
             this.iBtnDSBxem.Text = "Xem";
             this.iBtnDSBxem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -260,7 +250,7 @@
             this.iBtnDSBsua.BackColor = System.Drawing.Color.SkyBlue;
             this.iBtnDSBsua.FlatAppearance.BorderSize = 0;
             this.iBtnDSBsua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iBtnDSBsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iBtnDSBsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iBtnDSBsua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnDSBsua.IconChar = FontAwesome.Sharp.IconChar.Wrench;
             this.iBtnDSBsua.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -268,7 +258,7 @@
             this.iBtnDSBsua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iBtnDSBsua.Location = new System.Drawing.Point(307, 6);
             this.iBtnDSBsua.Name = "iBtnDSBsua";
-            this.iBtnDSBsua.Size = new System.Drawing.Size(118, 69);
+            this.iBtnDSBsua.Size = new System.Drawing.Size(118, 54);
             this.iBtnDSBsua.TabIndex = 2;
             this.iBtnDSBsua.Text = "Sửa";
             this.iBtnDSBsua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -279,7 +269,7 @@
             this.iBtnDSBxoa.BackColor = System.Drawing.Color.SkyBlue;
             this.iBtnDSBxoa.FlatAppearance.BorderSize = 0;
             this.iBtnDSBxoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iBtnDSBxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iBtnDSBxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iBtnDSBxoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnDSBxoa.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.iBtnDSBxoa.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -287,7 +277,7 @@
             this.iBtnDSBxoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iBtnDSBxoa.Location = new System.Drawing.Point(165, 6);
             this.iBtnDSBxoa.Name = "iBtnDSBxoa";
-            this.iBtnDSBxoa.Size = new System.Drawing.Size(118, 69);
+            this.iBtnDSBxoa.Size = new System.Drawing.Size(118, 54);
             this.iBtnDSBxoa.TabIndex = 1;
             this.iBtnDSBxoa.Text = "Xoá";
             this.iBtnDSBxoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -298,7 +288,7 @@
             this.iBtnDSBthem.BackColor = System.Drawing.Color.SkyBlue;
             this.iBtnDSBthem.FlatAppearance.BorderSize = 0;
             this.iBtnDSBthem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iBtnDSBthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iBtnDSBthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iBtnDSBthem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnDSBthem.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.iBtnDSBthem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -306,7 +296,7 @@
             this.iBtnDSBthem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iBtnDSBthem.Location = new System.Drawing.Point(21, 6);
             this.iBtnDSBthem.Name = "iBtnDSBthem";
-            this.iBtnDSBthem.Size = new System.Drawing.Size(118, 69);
+            this.iBtnDSBthem.Size = new System.Drawing.Size(118, 54);
             this.iBtnDSBthem.TabIndex = 0;
             this.iBtnDSBthem.Text = "Thêm";
             this.iBtnDSBthem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -314,11 +304,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 87);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 68);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(623, 506);
+            this.dataGridView1.Size = new System.Drawing.Size(623, 525);
             this.dataGridView1.TabIndex = 3;
             // 
             // Thucdon

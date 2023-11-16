@@ -30,25 +30,25 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.iBtnTTstar = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.iBtnTTstar = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,6 +70,26 @@
             this.panel4.Size = new System.Drawing.Size(864, 100);
             this.panel4.TabIndex = 3;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::QuanLyQuanCafe.Properties.Resources._360_F_514517927_dXLi1DauUmrCaE3AkElsVgJ1jaYZMcSA;
+            this.pictureBox3.Location = new System.Drawing.Point(186, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(98, 79);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::QuanLyQuanCafe.Properties.Resources._360_F_514517927_dXLi1DauUmrCaE3AkElsVgJ1jaYZMcSA;
+            this.pictureBox2.Location = new System.Drawing.Point(585, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(98, 79);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -81,7 +101,6 @@
             this.label1.Size = new System.Drawing.Size(319, 55);
             this.label1.TabIndex = 0;
             this.label1.Text = "Coffee Home";
-           
             // 
             // panel2
             // 
@@ -101,9 +120,10 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(89, 81);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(37, 96);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(254, 321);
+            this.panel3.Size = new System.Drawing.Size(278, 354);
             this.panel3.TabIndex = 1;
             // 
             // button1
@@ -113,21 +133,37 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(25, 270);
+            this.button1.Location = new System.Drawing.Point(24, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 44);
             this.button1.TabIndex = 5;
             this.button1.Text = "ODER NOW";
             this.button1.UseVisualStyleBackColor = false;
-           
+            // 
+            // iBtnTTstar
+            // 
+            this.iBtnTTstar.FlatAppearance.BorderSize = 0;
+            this.iBtnTTstar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iBtnTTstar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iBtnTTstar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.iBtnTTstar.IconChar = FontAwesome.Sharp.IconChar.Star;
+            this.iBtnTTstar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.iBtnTTstar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iBtnTTstar.Location = new System.Drawing.Point(141, 233);
+            this.iBtnTTstar.Name = "iBtnTTstar";
+            this.iBtnTTstar.Size = new System.Drawing.Size(104, 51);
+            this.iBtnTTstar.TabIndex = 4;
+            this.iBtnTTstar.Text = "5";
+            this.iBtnTTstar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.iBtnTTstar.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(33, 130);
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(27, 135);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 80);
+            this.label5.Size = new System.Drawing.Size(241, 95);
             this.label5.TabIndex = 3;
             this.label5.Text = "là một loại cà phê được sản\r\nxuất từ hạt cà phê Arabica.\r\nĐây là loại cà phê được" +
     " ưa chuộng\r\ntrên toàn thế giới vì hương vị thơm \r\nngon và hậu vị đắng nhẹ tinh t" +
@@ -139,7 +175,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(29, 88);
+            this.label4.Location = new System.Drawing.Point(24, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 42);
             this.label4.TabIndex = 2;
@@ -167,24 +203,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Giá:";
             // 
-            // iBtnTTstar
-            // 
-            this.iBtnTTstar.FlatAppearance.BorderSize = 0;
-            this.iBtnTTstar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iBtnTTstar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iBtnTTstar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.iBtnTTstar.IconChar = FontAwesome.Sharp.IconChar.Star;
-            this.iBtnTTstar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.iBtnTTstar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iBtnTTstar.Location = new System.Drawing.Point(135, 213);
-            this.iBtnTTstar.Name = "iBtnTTstar";
-            this.iBtnTTstar.Size = new System.Drawing.Size(104, 51);
-            this.iBtnTTstar.TabIndex = 4;
-            this.iBtnTTstar.Text = "5";
-            this.iBtnTTstar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.iBtnTTstar.UseVisualStyleBackColor = true;
-          
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QuanLyQuanCafe.Properties.Resources._17369_1620976860;
@@ -194,27 +212,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-           
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::QuanLyQuanCafe.Properties.Resources._360_F_514517927_dXLi1DauUmrCaE3AkElsVgJ1jaYZMcSA;
-            this.pictureBox2.Location = new System.Drawing.Point(585, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(98, 79);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::QuanLyQuanCafe.Properties.Resources._360_F_514517927_dXLi1DauUmrCaE3AkElsVgJ1jaYZMcSA;
-            this.pictureBox3.Location = new System.Drawing.Point(186, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(98, 79);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
             // 
             // Trangchu
             // 
@@ -228,12 +225,12 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
