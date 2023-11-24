@@ -20,6 +20,7 @@ namespace QuanLyQuanCafe
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(":)");
             frmTableManager f = new frmTableManager();
             this.Hide();
             f.ShowDialog();
