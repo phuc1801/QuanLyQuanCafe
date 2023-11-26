@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using QuanLyQuanCafe.DAO;
 
 namespace QuanLyQuanCafe
 {
@@ -17,9 +17,14 @@ namespace QuanLyQuanCafe
         public Taikhoan()
         {
             InitializeComponent();
-          
-
+            loadAccountLisr();
         }
 
+        void loadAccountLisr()
+        {
+            string query = "EXEC dbo.USP_GetAccountByUserName @userName ";
+            
+            dgvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query, new object[] {"phuc"});
+        }
     }
 }
