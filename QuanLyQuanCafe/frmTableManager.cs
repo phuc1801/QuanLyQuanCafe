@@ -152,14 +152,6 @@ namespace QuanLyQuanCafe
             Reset();
         }
 
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 }

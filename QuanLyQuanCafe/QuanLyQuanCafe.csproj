@@ -71,6 +71,7 @@
     <Compile Include="cacform\Doanhthu.Designer.cs">
       <DependentUpon>Doanhthu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="frmTableManager.cs">
       <SubType>Form</SubType>
