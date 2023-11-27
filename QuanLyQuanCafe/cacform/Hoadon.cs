@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Threading;
 
 namespace QuanLyQuanCafe
 {
@@ -37,15 +39,19 @@ namespace QuanLyQuanCafe
                 {
                     listBill.Items.Clear();
                     List<QuanLyQuanCafe.DTO.Menu> listBillInfo = MenuDAO.Instance.GetListMenuByTable(id);
-
+                    float totalPrice = 0;
                     foreach(QuanLyQuanCafe.DTO.Menu info in listBillInfo)
                     {
                         ListViewItem lsvItem = new ListViewItem(info.FoodName.ToString());
                         lsvItem.SubItems.Add(info.Count.ToString());
                         lsvItem.SubItems.Add(info.Price.ToString());
                         lsvItem.SubItems.Add(info.TotalPrice.ToString());
+                        totalPrice += info.TotalPrice;
                         listBill.Items.Add(lsvItem);
                     }
+                    CultureInfo culture = new CultureInfo("vi-VN");
+                    Thread.CurrentThread.CurrentCulture = culture;
+                    txtTotalPrice.Text = totalPrice.ToString("c");
                 }
 
                 void btn_Click(object sender, EventArgs e)
