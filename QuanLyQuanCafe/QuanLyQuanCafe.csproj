@@ -73,6 +73,8 @@
     </Compile>
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\TableDAO.cs" />
+    <Compile Include="DTO\Table.cs" />
     <Compile Include="frmTableManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,8 +218,6 @@
   <ItemGroup>
     <None Include="Resources\360_F_514517927_dXLi1DauUmrCaE3AkElsVgJ1jaYZMcSA.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

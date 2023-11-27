@@ -1,4 +1,6 @@
 ﻿
+using QuanLyQuanCafe.DAO;
+using QuanLyQuanCafe.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,9 +18,25 @@ namespace QuanLyQuanCafe
         public Hoadon()
         {
             InitializeComponent();
-           
+            loadTable();
         }
-       
+        
+        void loadTable()
+        {
+            List<Table> tableList = TableDAO.Instance.loadTableList();
+            foreach (Table item in tableList)
+            {
+                Button btn = new Button() { Width = TableDAO.TableWidth, Height = TableDAO.TableHeight};
+                btn.Text = item.Name + Environment.NewLine + item.Status;
+                switch (item.Status)
+                {
+                    case "Trống":
+                            btn.BackColor = Color.White; break;
+                    default: btn.BackColor = Color.SkyBlue; break;
+                }
+                flptabFood.Controls.Add(btn);
+            }
+        }
 
        
     }
