@@ -21,8 +21,23 @@ namespace QuanLyQuanCafe
         {
             InitializeComponent();
             loadTable();
+            loadCategory();
         }
         
+        void loadCategory()
+        {
+            List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
+            cbCategory.DataSource = listCategory;
+            cbCategory.DisplayMember = "Name";
+        }
+
+        void loadFoodListByCategoryID(int id)
+        {
+            List<Food> listFood = FoodDAO.Instance.GetFoodByCategoryID(id);
+            cbFood.DataSource = listFood;
+            cbFood.DisplayMember = "Price";
+        }
+
         void loadTable()
         {
             List<Table> tableList = TableDAO.Instance.loadTableList();
@@ -57,6 +72,7 @@ namespace QuanLyQuanCafe
                 void btn_Click(object sender, EventArgs e)
                 {
                     int tableID = ((sender as Button).Tag as Table).ID;
+                    listBill.Tag = (sender as Button).Tag;
                     showBill(tableID);
                 }
 
@@ -73,6 +89,35 @@ namespace QuanLyQuanCafe
             }
         }
 
-       
+        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+
+            ComboBox cb = sender as ComboBox;
+            if(cb.SelectedIndex == null)
+            {
+                return;
+            }
+            Category selected = cb.SelectedItem as Category;
+            id = selected.ID;
+            loadFoodListByCategoryID(id);
+        }
+
+        private void btnThemmon_Click(object sender, EventArgs e)
+        {
+            Table table = listBill.Tag as Table;
+            int idBill = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
+            int foodID = (cbFood.SelectedItem as Food).ID;
+            int count = 0; // fix32p
+            if(idBill == -1)
+            {
+                BillDAO.Instance.InsertBill(table.ID);
+                BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), foodID, count);
+            }
+            else
+            {
+                BillInfoDAO.Instance.InsertBillInfo(idBill, foodID, count);
+            }
+        }
     }
 }

@@ -39,10 +39,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.iBtnHDcafe = new FontAwesome.Sharp.IconButton();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnThemmon = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbFood = new System.Windows.Forms.ComboBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
@@ -124,10 +124,10 @@
             // 
             this.panel3.Controls.Add(this.numericUpDown1);
             this.panel3.Controls.Add(this.iBtnHDcafe);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnThemmon);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.comboBox3);
-            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Controls.Add(this.cbFood);
+            this.panel3.Controls.Add(this.cbCategory);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Location = new System.Drawing.Point(663, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
@@ -168,19 +168,20 @@
             this.iBtnHDcafe.TabIndex = 2;
             this.iBtnHDcafe.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnThemmon
             // 
-            this.button2.BackColor = System.Drawing.Color.SkyBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(265, 97);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 47);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Thêm món";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnThemmon.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnThemmon.FlatAppearance.BorderSize = 0;
+            this.btnThemmon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemmon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnThemmon.Location = new System.Drawing.Point(265, 97);
+            this.btnThemmon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThemmon.Name = "btnThemmon";
+            this.btnThemmon.Size = new System.Drawing.Size(109, 47);
+            this.btnThemmon.TabIndex = 1;
+            this.btnThemmon.Text = "Thêm món";
+            this.btnThemmon.UseVisualStyleBackColor = false;
+            this.btnThemmon.Click += new System.EventHandler(this.btnThemmon_Click);
             // 
             // button1
             // 
@@ -196,23 +197,24 @@
             this.button1.Text = "Chuyển bàn";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // comboBox3
+            // cbFood
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(4, 127);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(233, 24);
-            this.comboBox3.TabIndex = 0;
+            this.cbFood.FormattingEnabled = true;
+            this.cbFood.Location = new System.Drawing.Point(4, 127);
+            this.cbFood.Margin = new System.Windows.Forms.Padding(4);
+            this.cbFood.Name = "cbFood";
+            this.cbFood.Size = new System.Drawing.Size(233, 24);
+            this.cbFood.TabIndex = 0;
             // 
-            // comboBox2
+            // cbCategory
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(4, 94);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(233, 24);
-            this.comboBox2.TabIndex = 0;
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(4, 94);
+            this.cbCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(233, 24);
+            this.cbCategory.TabIndex = 0;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -328,10 +330,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private FontAwesome.Sharp.IconButton iBtnHDcafe;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnThemmon;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbFood;
+        private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtTotalPrice;
