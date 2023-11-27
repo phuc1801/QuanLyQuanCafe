@@ -49,6 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tBtnThanhtoan = new FontAwesome.Sharp.IconButton();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -62,24 +63,27 @@
             this.panel1.Controls.Add(this.flptabFood);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(490, 593);
+            this.panel1.Size = new System.Drawing.Size(653, 730);
             this.panel1.TabIndex = 0;
             // 
             // flptabFood
             // 
             this.flptabFood.AutoScroll = true;
-            this.flptabFood.Location = new System.Drawing.Point(3, 3);
+            this.flptabFood.Location = new System.Drawing.Point(4, 4);
+            this.flptabFood.Margin = new System.Windows.Forms.Padding(4);
             this.flptabFood.Name = "flptabFood";
-            this.flptabFood.Size = new System.Drawing.Size(484, 587);
+            this.flptabFood.Size = new System.Drawing.Size(645, 722);
             this.flptabFood.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.listBill);
-            this.panel2.Location = new System.Drawing.Point(496, 148);
+            this.panel2.Location = new System.Drawing.Point(661, 182);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(418, 359);
+            this.panel2.Size = new System.Drawing.Size(550, 442);
             this.panel2.TabIndex = 1;
             // 
             // listBill
@@ -87,15 +91,30 @@
             this.listBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.IDfood,
             this.Count,
-            this.columnHeader1});
+            this.columnHeader1,
+            this.columnHeader2});
             this.listBill.GridLines = true;
             this.listBill.HideSelection = false;
-            this.listBill.Location = new System.Drawing.Point(1, 4);
+            this.listBill.Location = new System.Drawing.Point(24, 10);
+            this.listBill.Margin = new System.Windows.Forms.Padding(4);
             this.listBill.Name = "listBill";
-            this.listBill.Size = new System.Drawing.Size(414, 352);
+            this.listBill.Size = new System.Drawing.Size(486, 432);
             this.listBill.TabIndex = 0;
             this.listBill.UseCompatibleStateImageBehavior = false;
-            this.listBill.View = System.Windows.Forms.View.List;
+            this.listBill.View = System.Windows.Forms.View.Details;
+            // 
+            // IDfood
+            // 
+            this.IDfood.Text = "Tên món ";
+            this.IDfood.Width = 155;
+            // 
+            // Count
+            // 
+            this.Count.Text = "Số lượng";
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Đơn giá";
             // 
             // panel3
             // 
@@ -106,21 +125,23 @@
             this.panel3.Controls.Add(this.comboBox3);
             this.panel3.Controls.Add(this.comboBox2);
             this.panel3.Controls.Add(this.comboBox1);
-            this.panel3.Location = new System.Drawing.Point(497, 0);
+            this.panel3.Location = new System.Drawing.Point(663, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(417, 142);
+            this.panel3.Size = new System.Drawing.Size(548, 175);
             this.panel3.TabIndex = 2;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(312, 90);
+            this.numericUpDown1.Location = new System.Drawing.Point(416, 111);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(52, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(69, 22);
             this.numericUpDown1.TabIndex = 3;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
@@ -136,9 +157,10 @@
             this.iBtnHDcafe.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iBtnHDcafe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iBtnHDcafe.IconSize = 60;
-            this.iBtnHDcafe.Location = new System.Drawing.Point(22, 3);
+            this.iBtnHDcafe.Location = new System.Drawing.Point(29, 4);
+            this.iBtnHDcafe.Margin = new System.Windows.Forms.Padding(4);
             this.iBtnHDcafe.Name = "iBtnHDcafe";
-            this.iBtnHDcafe.Size = new System.Drawing.Size(84, 61);
+            this.iBtnHDcafe.Size = new System.Drawing.Size(112, 75);
             this.iBtnHDcafe.TabIndex = 2;
             this.iBtnHDcafe.UseVisualStyleBackColor = true;
             // 
@@ -148,9 +170,10 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(199, 79);
+            this.button2.Location = new System.Drawing.Point(265, 97);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 38);
+            this.button2.Size = new System.Drawing.Size(109, 47);
             this.button2.TabIndex = 1;
             this.button2.Text = "Thêm món";
             this.button2.UseVisualStyleBackColor = false;
@@ -161,9 +184,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(282, 14);
+            this.button1.Location = new System.Drawing.Point(376, 17);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 38);
+            this.button1.Size = new System.Drawing.Size(109, 47);
             this.button1.TabIndex = 1;
             this.button1.Text = "Chuyển bàn";
             this.button1.UseVisualStyleBackColor = false;
@@ -171,25 +195,28 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(3, 103);
+            this.comboBox3.Location = new System.Drawing.Point(4, 127);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(176, 21);
+            this.comboBox3.Size = new System.Drawing.Size(233, 24);
             this.comboBox3.TabIndex = 0;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(3, 76);
+            this.comboBox2.Location = new System.Drawing.Point(4, 94);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(176, 21);
+            this.comboBox2.Size = new System.Drawing.Size(233, 24);
             this.comboBox2.TabIndex = 0;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(138, 24);
+            this.comboBox1.Location = new System.Drawing.Point(184, 30);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(110, 21);
+            this.comboBox1.Size = new System.Drawing.Size(145, 24);
             this.comboBox1.TabIndex = 0;
             // 
             // panel4
@@ -199,32 +226,36 @@
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.tBtnThanhtoan);
-            this.panel4.Location = new System.Drawing.Point(496, 513);
+            this.panel4.Location = new System.Drawing.Point(661, 631);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(417, 80);
+            this.panel4.Size = new System.Drawing.Size(556, 98);
             this.panel4.TabIndex = 3;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(105, 48);
+            this.textBox1.Location = new System.Drawing.Point(140, 59);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
+            this.textBox1.Size = new System.Drawing.Size(235, 22);
             this.textBox1.TabIndex = 6;
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(105, 13);
+            this.numericUpDown2.Location = new System.Drawing.Point(140, 16);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(59, 20);
+            this.numericUpDown2.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown2.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(16, 45);
+            this.label2.Location = new System.Drawing.Point(21, 55);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Tổng tiền:";
             // 
@@ -232,9 +263,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(17, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.Size = new System.Drawing.Size(87, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Giảm giá (%):";
             // 
@@ -247,23 +279,29 @@
             this.tBtnThanhtoan.IconChar = FontAwesome.Sharp.IconChar.Calculator;
             this.tBtnThanhtoan.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.tBtnThanhtoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.tBtnThanhtoan.Location = new System.Drawing.Point(288, 6);
+            this.tBtnThanhtoan.Location = new System.Drawing.Point(384, 7);
+            this.tBtnThanhtoan.Margin = new System.Windows.Forms.Padding(4);
             this.tBtnThanhtoan.Name = "tBtnThanhtoan";
-            this.tBtnThanhtoan.Size = new System.Drawing.Size(82, 62);
+            this.tBtnThanhtoan.Size = new System.Drawing.Size(109, 76);
             this.tBtnThanhtoan.TabIndex = 2;
             this.tBtnThanhtoan.Text = "Thanh toán";
             this.tBtnThanhtoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tBtnThanhtoan.UseVisualStyleBackColor = false;
             // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Thành tiền";
+            // 
             // Hoadon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(918, 593);
+            this.ClientSize = new System.Drawing.Size(1224, 730);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Hoadon";
             this.Text = "Hoadon";
             this.panel1.ResumeLayout(false);
@@ -300,5 +338,6 @@
         private System.Windows.Forms.ColumnHeader IDfood;
         private System.Windows.Forms.ColumnHeader Count;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

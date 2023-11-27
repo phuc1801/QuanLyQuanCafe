@@ -22,7 +22,7 @@ namespace QuanLyQuanCafe
 
         void loadAccountLisr()
         {
-            string query = "EXEC dbo.USP_GetAccountByUserName @userName ";
+            string query = "EXEC dbo.USP_GetAccountByUserName @userName";
             
             dgvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query, new object[] {"phuc"});
         }

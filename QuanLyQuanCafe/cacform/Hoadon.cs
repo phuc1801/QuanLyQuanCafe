@@ -28,6 +28,35 @@ namespace QuanLyQuanCafe
             {
                 Button btn = new Button() { Width = TableDAO.TableWidth, Height = TableDAO.TableHeight};
                 btn.Text = item.Name + Environment.NewLine + item.Status;
+                btn.Click += btn_Click;
+                btn.Tag = item;
+
+                //bill
+
+                void showBill(int id)
+                {
+                    listBill.Items.Clear();
+                    List<QuanLyQuanCafe.DTO.Menu> listBillInfo = MenuDAO.Instance.GetListMenuByTable(id);
+
+                    foreach(QuanLyQuanCafe.DTO.Menu info in listBillInfo)
+                    {
+                        ListViewItem lsvItem = new ListViewItem(info.FoodName.ToString());
+                        lsvItem.SubItems.Add(info.Count.ToString());
+                        lsvItem.SubItems.Add(info.Price.ToString());
+                        lsvItem.SubItems.Add(info.TotalPrice.ToString());
+                        listBill.Items.Add(lsvItem);
+                    }
+                }
+
+                void btn_Click(object sender, EventArgs e)
+                {
+                    int tableID = ((sender as Button).Tag as Table).ID;
+                    showBill(tableID);
+                }
+
+
+
+                // them ban an
                 switch (item.Status)
                 {
                     case "Trống":
