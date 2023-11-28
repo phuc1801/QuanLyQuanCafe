@@ -21,7 +21,7 @@ namespace QuanLyQuanCafe.DAO
         private DataProvider() { }
 
 
-        private string str = @"Data Source=DESKTOP-5CF3ARN;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
+        private string str = @"Data Source=DESKTOP-5NL0O53;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
