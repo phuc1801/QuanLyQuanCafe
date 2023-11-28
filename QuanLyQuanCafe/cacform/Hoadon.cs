@@ -40,6 +40,7 @@ namespace QuanLyQuanCafe
 
         void loadTable()
         {
+            flptabFood.Controls.Clear();
             List<Table> tableList = TableDAO.Instance.loadTableList();
             foreach (Table item in tableList)
             {
@@ -82,6 +83,8 @@ namespace QuanLyQuanCafe
             CultureInfo culture = new CultureInfo("vi-VN");
             Thread.CurrentThread.CurrentCulture = culture;
             txtTotalPrice.Text = totalPrice.ToString("c");
+
+           
         }
 
         void btn_Click(object sender, EventArgs e)
@@ -121,6 +124,23 @@ namespace QuanLyQuanCafe
                 BillInfoDAO.Instance.InsertBillInfo(idBill, foodID, count);
             }
             showBill(table.ID);
+            loadTable();
+        }
+
+        private void tBtnThanhtoan_Click(object sender, EventArgs e)
+        {
+            Table table = listBill.Tag as Table;
+            int idBill = BillDAO.Instance.GetUncheckBillIDByTableID (table.ID);
+
+            if(idBill != -1)
+            {
+                if (MessageBox.Show("Bạn có chắc chắn thánh toán hoá đơn cho bàn " + table.Name, "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    BillDAO.Instance.checkOut(idBill);
+                    showBill(table.ID);
+                    loadTable();
+                } 
+            }
         }
     }
 }

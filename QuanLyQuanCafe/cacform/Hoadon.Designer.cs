@@ -279,6 +279,7 @@
             this.tBtnThanhtoan.Text = "Thanh toán";
             this.tBtnThanhtoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tBtnThanhtoan.UseVisualStyleBackColor = false;
+            this.tBtnThanhtoan.Click += new System.EventHandler(this.tBtnThanhtoan_Click);
             // 
             // Hoadon
             // 

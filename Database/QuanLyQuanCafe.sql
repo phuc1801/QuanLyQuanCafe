@@ -164,3 +164,103 @@ SELECT * FROM FoodCategory
 
 SELECT f.name, bi.count, f.price, f.price * bi.count AS totalPrice FROM BillInfo AS bi, Bill as b, Food as f
 WHERE bi.idBill = b.id AND bi.idFood = f.id AND b.idTable = 2
+
+-- ngay 2
+CREATE PROC USP_InsertBill
+@idTable INT
+AS
+BEGIN
+	INSERT Bill(DateCheckIn, DateCheckOut, idTable, status) VALUES
+	(GETDATE(), NULL, @idTable, 0)
+END
+GO
+
+CREATE PROC USP_InsertBillInfo
+@idBill INT, @idFood INT, @count INT
+AS
+BEGIN
+	INSERT BillInfo(idBill, idFood, count) VALUES
+	(@idBill, @idFood, @count)
+END
+GO
+
+ALTER PROC USP_InsertBillInfo
+@idBill INT, @idFood INT, @count INT
+AS
+BEGIN
+	DECLARE @isExitsBillInfo INT
+	DECLARE @foodCount INT = 1
+
+	SELECT @isExitsBillInfo = id, @foodCount = b.count FROM BillInfo AS b WHERE idBill = @idBill AND idFood = @idFood
+	IF(@isExitsBillInfo > 0)
+	BEGIN
+		DECLARE @newCount INT = @foodCount + @count
+		IF(@newCount >0)
+			UPDATE BillInfo SET count = @foodCount + @count WHERE idFood = @idFood
+		ELSE
+			DELETE BillInfo WHERE idBill = @idBill AND idFood = @idFood
+	END
+	ELSE
+	BEGIN
+		INSERT BillInfo(idBill, idFood, count) VALUES
+		(@idBill, @idFood, @count)
+	END
+
+	
+END
+GO
+
+UPDATE Bill SET status = 1 WHERE id = 1
+
+CREATE TRIGGER UTG_UpdateBillInfo
+ON BillInfo FOR INSERT, UPDATE
+AS
+BEGIN
+	DECLARE @idBill INT
+	SELECT @idBill = idBill FROM Inserted
+
+	DECLARE @idTable INT
+	SELECT @idTable = idTable FROM Bill WHERE id = @idBill AND status = 0
+
+	UPDATE TableFood SET status = N'Có người' WHERE id = @idTable
+END
+GO
+
+CREATE TRIGGER UTG_UpdateBill
+ON Bill FOR UPDATE
+AS
+BEGIN
+	DECLARE @idBill INT
+	SELECT @idBill = id FROM Inserted
+		
+	DECLARE @idTable INT
+	SELECT @idTable = idTable FROM Bill WHERE id = @idBill 
+
+	DECLARE @count INT = 0
+	SELECT @count = COUNT(*) FROM Bill WHERE idTable = @idTable AND status = 0
+
+	IF(@count = 0)
+		UPDATE TableFood SET status = N'Trống'
+END
+GO
+
+ALTER TRIGGER UTG_UpdateBill
+ON Bill FOR UPDATE
+AS
+BEGIN
+	DECLARE @idBill INT
+	SELECT @idBill = id FROM Inserted
+		
+	DECLARE @idTable INT
+	SELECT @idTable = idTable FROM Bill WHERE id = @idBill 
+
+	DECLARE @count INT = 0
+	SELECT @count = COUNT(*) FROM Bill WHERE idTable = @idTable AND status = 0
+
+	IF(@count = 0)
+		UPDATE TableFood SET status = N'Trống' WHERE id = @idTable
+END
+GO
+
+DELETE BillInfo
+DELETE Bill
