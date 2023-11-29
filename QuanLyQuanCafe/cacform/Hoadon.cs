@@ -131,12 +131,14 @@ namespace QuanLyQuanCafe
         {
             Table table = listBill.Tag as Table;
             int idBill = BillDAO.Instance.GetUncheckBillIDByTableID (table.ID);
-
+            int discount = (int)nmdiscount.Value;
+            double totalPrice = Convert.ToDouble(txtTotalPrice.Text.Split(',')[0]);
+            double finalTotalPrice = totalPrice - (totalPrice / 100) * discount;
             if(idBill != -1)
             {
-                if (MessageBox.Show("Bạn có chắc chắn thánh toán hoá đơn cho bàn " + table.Name, "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0}\nTổng tiền - (Tổng tiền / 100) x Giảm giá\n=> {1} - ({1} / 100) x {2} = {3}", table.Name, totalPrice, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
-                    BillDAO.Instance.checkOut(idBill);
+                    BillDAO.Instance.checkOut(idBill, discount);
                     showBill(table.ID);
                     loadTable();
                 } 

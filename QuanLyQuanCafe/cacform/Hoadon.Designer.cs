@@ -46,7 +46,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.nmdiscount = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tBtnThanhtoan = new FontAwesome.Sharp.IconButton();
@@ -55,7 +55,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmdiscount)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -216,7 +216,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.txtTotalPrice);
-            this.panel4.Controls.Add(this.numericUpDown2);
+            this.panel4.Controls.Add(this.nmdiscount);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.tBtnThanhtoan);
@@ -236,12 +236,12 @@
             this.txtTotalPrice.TabIndex = 6;
             this.txtTotalPrice.Text = "0";
             // 
-            // numericUpDown2
+            // nmdiscount
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(105, 13);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown2.TabIndex = 5;
+            this.nmdiscount.Location = new System.Drawing.Point(105, 13);
+            this.nmdiscount.Name = "nmdiscount";
+            this.nmdiscount.Size = new System.Drawing.Size(59, 20);
+            this.nmdiscount.TabIndex = 5;
             // 
             // label2
             // 
@@ -298,7 +298,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmdiscount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -319,7 +319,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtTotalPrice;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown nmdiscount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton tBtnThanhtoan;

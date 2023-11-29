@@ -45,6 +45,7 @@ CREATE TABLE Bill
 	DateCheckIn DATE NOT NULL DEFAULT GETDATE(),
 	DateCheckOut DATE,
 	idTable INT NOT NULL,
+	discount INT,
 	status INT NOT NULL DEFAULT 0
 
 	FOREIGN KEY(idTable) REFERENCES dbo.TableFood(id)
@@ -170,8 +171,8 @@ CREATE PROC USP_InsertBill
 @idTable INT
 AS
 BEGIN
-	INSERT Bill(DateCheckIn, DateCheckOut, idTable, status) VALUES
-	(GETDATE(), NULL, @idTable, 0)
+	INSERT Bill(DateCheckIn, DateCheckOut, idTable, status, discount) VALUES
+	(GETDATE(), NULL, @idTable, 0, 0)
 END
 GO
 
@@ -264,3 +265,8 @@ GO
 
 DELETE BillInfo
 DELETE Bill
+
+UPDATE Bill SET discount = 0;
+
+SELECT * FROM Bill
+
