@@ -40,10 +40,10 @@
             this.nmFoodCount = new System.Windows.Forms.NumericUpDown();
             this.iBtnHDcafe = new FontAwesome.Sharp.IconButton();
             this.btnThemmon = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSwitchTable = new System.Windows.Forms.Button();
             this.cbFood = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbSwitchTable = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.nmdiscount = new System.Windows.Forms.NumericUpDown();
@@ -121,10 +121,10 @@
             this.panel3.Controls.Add(this.nmFoodCount);
             this.panel3.Controls.Add(this.iBtnHDcafe);
             this.panel3.Controls.Add(this.btnThemmon);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnSwitchTable);
             this.panel3.Controls.Add(this.cbFood);
             this.panel3.Controls.Add(this.cbCategory);
-            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.cbSwitchTable);
             this.panel3.Location = new System.Drawing.Point(497, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(411, 142);
@@ -175,18 +175,19 @@
             this.btnThemmon.UseVisualStyleBackColor = false;
             this.btnThemmon.Click += new System.EventHandler(this.btnThemmon_Click);
             // 
-            // button1
+            // btnSwitchTable
             // 
-            this.button1.BackColor = System.Drawing.Color.SkyBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(282, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 38);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Chuyển bàn";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSwitchTable.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnSwitchTable.FlatAppearance.BorderSize = 0;
+            this.btnSwitchTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSwitchTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSwitchTable.Location = new System.Drawing.Point(282, 14);
+            this.btnSwitchTable.Name = "btnSwitchTable";
+            this.btnSwitchTable.Size = new System.Drawing.Size(82, 38);
+            this.btnSwitchTable.TabIndex = 1;
+            this.btnSwitchTable.Text = "Chuyển bàn";
+            this.btnSwitchTable.UseVisualStyleBackColor = false;
+            this.btnSwitchTable.Click += new System.EventHandler(this.btnSwitchTable_Click);
             // 
             // cbFood
             // 
@@ -205,13 +206,13 @@
             this.cbCategory.TabIndex = 0;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
-            // comboBox1
+            // cbSwitchTable
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(138, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(110, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cbSwitchTable.FormattingEnabled = true;
+            this.cbSwitchTable.Location = new System.Drawing.Point(138, 24);
+            this.cbSwitchTable.Name = "cbSwitchTable";
+            this.cbSwitchTable.Size = new System.Drawing.Size(110, 21);
+            this.cbSwitchTable.TabIndex = 0;
             // 
             // panel4
             // 
@@ -313,10 +314,10 @@
         private System.Windows.Forms.NumericUpDown nmFoodCount;
         private FontAwesome.Sharp.IconButton iBtnHDcafe;
         private System.Windows.Forms.Button btnThemmon;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSwitchTable;
         private System.Windows.Forms.ComboBox cbFood;
         private System.Windows.Forms.ComboBox cbCategory;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbSwitchTable;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtTotalPrice;
         private System.Windows.Forms.NumericUpDown nmdiscount;

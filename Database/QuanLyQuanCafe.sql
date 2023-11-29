@@ -270,3 +270,47 @@ UPDATE Bill SET discount = 0;
 
 SELECT * FROM Bill
 
+
+--chuyen ban
+
+--DECLARE @idBillNew INT = 19
+--SELECT id INTO IDBillInfoTable FROM BillInfo WHERE idBill = @idBillNew
+
+--DECLARE @idBillOld INT = 10
+
+--UPDATE BillInfo SET idBill = @idBillOld WHERE id IN (SELECT * FROM IDBillInfoTable)
+
+CREATE PROC USP_SwitchTable
+@idTable1 INT, @idTable2 INT 
+AS BEGIN
+	DECLARE @idFirstBill INT
+	DECLARE @idSeconrdBill INT
+	
+	SELECT @idSeconrdBill = id FROM Bill WHERE idTable = @idTable2 AND status = 0
+	SELECT @idFirstBill = id FROM Bill WHERE idTable = @idTable1 AND status = 0
+	--first
+	IF(@idFirstBill = NULL)
+	BEGIN
+		INSERT Bill(DateCheckIn, DateCheckOut, idTable, status) VALUES
+		(GETDATE(), NULL, @idTable1, 0)
+
+		SELECT @idFirstBill = MAX(id) FROM Bill WHERE idTable = @idTable1 AND status = 0
+	END
+	--second
+	IF(@idSeconrdBill = NULL)
+	BEGIN
+		INSERT Bill(DateCheckIn, DateCheckOut, idTable, status) VALUES
+		(GETDATE(), NULL, @idTable2, 0)
+
+		SELECT @idSeconrdBill = MAX(id) FROM Bill WHERE idTable = @idTable2 AND status = 0
+	END
+
+
+	SELECT id INTO IDBillInfoTable FROM BillInfo WHERE idBill = @idSeconrdBill
+	
+	UPDATE BillInfo SET idBill = @idSeconrdBill WHERE idBill = @idFirstBill
+	UPDATE BillInfo SET idBill = @idFirstBill WHERE id IN (SELECT * FROM IDBillInfoTable)
+	
+	DROP TABLE IDBillInfoTable
+END
+GO

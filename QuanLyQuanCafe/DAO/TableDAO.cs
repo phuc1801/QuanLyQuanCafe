@@ -23,7 +23,13 @@ namespace QuanLyQuanCafe.DAO
 
         public TableDAO() { }
 
-       
+        // doi ban cho nhau
+
+        public void switchTable(int id1, int id2)
+        {
+            DataProvider.Instance.ExecuteQuery("USP_SwitchTable @idTable1 , @idTable2", new object[] {id1, id2});
+        }
+
         public List<Table> loadTableList()
         {
             List<Table> list = new List<Table>();
