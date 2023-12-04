@@ -251,6 +251,7 @@
             this.iBtnDSBsua.Text = "Sửa";
             this.iBtnDSBsua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iBtnDSBsua.UseVisualStyleBackColor = false;
+            this.iBtnDSBsua.Click += new System.EventHandler(this.iBtnDSBsua_Click);
             // 
             // iBtnDSBxoa
             // 
@@ -270,6 +271,7 @@
             this.iBtnDSBxoa.Text = "Xoá";
             this.iBtnDSBxoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iBtnDSBxoa.UseVisualStyleBackColor = false;
+            this.iBtnDSBxoa.Click += new System.EventHandler(this.iBtnDSBxoa_Click);
             // 
             // iBtnDSBthem
             // 
@@ -289,6 +291,7 @@
             this.iBtnDSBthem.Text = "Thêm";
             this.iBtnDSBthem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iBtnDSBthem.UseVisualStyleBackColor = false;
+            this.iBtnDSBthem.Click += new System.EventHandler(this.iBtnDSBthem_Click);
             // 
             // dgvFood
             // 
