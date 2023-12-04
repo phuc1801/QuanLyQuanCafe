@@ -221,11 +221,14 @@ BEGIN
 	SELECT @idBill = idBill FROM Inserted
 
 	DECLARE @idTable INT
-	SELECT @idTable = idTable FROM Bill WHERE id = @idBill AND status = 0
-
+	SELECT @idTable = idTable FROM Bill WHERE id = @idBill AND status = 0		
 	UPDATE TableFood SET status = N'Có người' WHERE id = @idTable
+	
 END
 GO
+
+
+
 
 CREATE TRIGGER UTG_UpdateBill
 ON Bill FOR UPDATE
@@ -280,37 +283,53 @@ SELECT * FROM Bill
 
 --UPDATE BillInfo SET idBill = @idBillOld WHERE id IN (SELECT * FROM IDBillInfoTable)
 
-CREATE PROC USP_SwitchTable
+ALTER PROC USP_SwitchTable
 @idTable1 INT, @idTable2 INT 
 AS BEGIN
 	DECLARE @idFirstBill INT
 	DECLARE @idSeconrdBill INT
+	DECLARE @isFirstTablEmty INT = 1
+	DECLARE @isSecondTablEmty INT = 1
 	
-	SELECT @idSeconrdBill = id FROM Bill WHERE idTable = @idTable2 AND status = 0
-	SELECT @idFirstBill = id FROM Bill WHERE idTable = @idTable1 AND status = 0
+	SELECT @idSeconrdBill = id FROM dbo.Bill WHERE idTable = @idTable2 AND status = 0
+	SELECT @idFirstBill = id FROM dbo.Bill WHERE idTable = @idTable1 AND status = 0
+	
+	PRINT @idFirstBill
+	PRINT @idSeconrdBill
+	PRINT '-----------'
 	--first
-	IF(@idFirstBill = NULL)
+	IF(@idFirstBill IS NULL)
 	BEGIN
 		INSERT Bill(DateCheckIn, DateCheckOut, idTable, status) VALUES
 		(GETDATE(), NULL, @idTable1, 0)
 
 		SELECT @idFirstBill = MAX(id) FROM Bill WHERE idTable = @idTable1 AND status = 0
 	END
+	SELECT @isFirstTablEmty = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idFirstBill
 	--second
-	IF(@idSeconrdBill = NULL)
+	IF(@idSeconrdBill IS NULL)
 	BEGIN
 		INSERT Bill(DateCheckIn, DateCheckOut, idTable, status) VALUES
 		(GETDATE(), NULL, @idTable2, 0)
 
 		SELECT @idSeconrdBill = MAX(id) FROM Bill WHERE idTable = @idTable2 AND status = 0
 	END
+	SELECT @isSecondTablEmty = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idSeconrdBill
 
-
-	SELECT id INTO IDBillInfoTable FROM BillInfo WHERE idBill = @idSeconrdBill
+	SELECT id INTO IDBillInfoTable FROM dbo.BillInfo WHERE idBill = @idSeconrdBill
 	
-	UPDATE BillInfo SET idBill = @idSeconrdBill WHERE idBill = @idFirstBill
-	UPDATE BillInfo SET idBill = @idFirstBill WHERE id IN (SELECT * FROM IDBillInfoTable)
+	UPDATE dbo.BillInfo SET idBill = @idSeconrdBill WHERE idBill = @idFirstBill
+	
+	UPDATE dbo.BillInfo SET idBill = @idFirstBill WHERE id IN (SELECT * FROM IDBillInfoTable)
 	
 	DROP TABLE IDBillInfoTable
+
+	IF (@isFirstTablEmty = 0)
+		UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable2
+		
+	IF (@isSecondTablEmty= 0)
+		UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable1
 END
 GO
+
+UPDATE TableFood SET status = N'Trống'
