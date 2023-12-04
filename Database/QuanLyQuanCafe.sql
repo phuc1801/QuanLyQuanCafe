@@ -333,3 +333,17 @@ END
 GO
 
 UPDATE TableFood SET status = N'Trống'
+
+ALTER TABLE Bill ADD totalPrice FLOAT
+DELETE Bill
+
+
+alter PROC USP_GetListBillByDate
+@checkIn DATE, @checkOut DATE
+AS
+BEGIN
+	SELECT t.name as [Tên bàn], b.totalPrice as [Tổng tiền], DateCheckIn as [Ngày vào], DateCheckOut as [Ngày ra], discount as [Giảm giá] 
+	FROM Bill as b, TableFood as t
+	WHERE DateCheckIn >= @checkIn AND DateCheckOut <= @checkOut AND b.status = 1 AND t.id = b.idTable 
+END
+GO

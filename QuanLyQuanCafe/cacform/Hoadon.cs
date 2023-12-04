@@ -16,10 +16,10 @@ using System.Threading;
 namespace QuanLyQuanCafe
 {
     public partial class Hoadon : Form
-    {
+    {        
         public Hoadon()
         {
-            InitializeComponent();
+            InitializeComponent();         
             loadTable();
             loadCategory();
             loadComboboxTable(cbSwitchTable);

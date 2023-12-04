@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using QuanLyQuanCafe.DTO;
 
 namespace QuanLyQuanCafe.DAO
 {
@@ -24,6 +25,16 @@ namespace QuanLyQuanCafe.DAO
             string query = "USP_Login @userName , @passWord";
             DataTable res = DataProvider.Instance.ExecuteQuery(query, new object[] {userName, passWord});
             return res.Rows.Count > 0;
+        }
+
+        public Account GetAccountByUserName(string userName)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("Select * from Account where userName = '" + userName + "'");
+            foreach(DataRow item in data.Rows)
+            {
+                return new Account(item);
+            }
+            return null;
         }
     }
 }

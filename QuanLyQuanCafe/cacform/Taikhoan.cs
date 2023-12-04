@@ -9,16 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using QuanLyQuanCafe.DAO;
+using QuanLyQuanCafe.DTO;
 
 namespace QuanLyQuanCafe
 {
     public partial class Taikhoan : Form
     {
+
+       
         public Taikhoan()
         {
+           
             InitializeComponent();
             loadAccountLisr();
         }
+
+      
+        
+
+
 
         void loadAccountLisr()
         {

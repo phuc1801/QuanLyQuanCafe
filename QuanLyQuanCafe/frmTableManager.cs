@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using QuanLyQuanCafe.DTO;
 
 namespace QuanLyQuanCafe
 {
@@ -17,9 +18,14 @@ namespace QuanLyQuanCafe
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        public frmTableManager()
+        private Account loginAccount;
+
+        public Account LoginAccount { get => loginAccount; set => loginAccount = value; }
+
+        public frmTableManager(Account acc)
         {
             InitializeComponent();
+            this.loginAccount = acc;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -29,6 +35,9 @@ namespace QuanLyQuanCafe
             OpenChildForm(new Trangchu());
 
         }
+
+        
+
         // seting cho iconbutton bat tat
         private void ActivateButton(object senderBtn, Color color)
         {
