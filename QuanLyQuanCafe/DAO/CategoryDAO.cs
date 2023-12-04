@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 
 namespace QuanLyQuanCafe.DAO
 {
@@ -33,6 +34,22 @@ namespace QuanLyQuanCafe.DAO
                 list.Add(category);
             }
             return list;
+        }
+        public Category GetCategoryByID(int id) {
+            Category category = null;
+
+            string query = "SELECT * FROM FoodCategory WHERE id = " + id;
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow row in data.Rows)
+            {
+                category = new Category(row);
+                return category;
+            }
+            
+
+            return category;
         }
     }
 }

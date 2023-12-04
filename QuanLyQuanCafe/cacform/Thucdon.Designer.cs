@@ -34,40 +34,40 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.iBtnTDcafe = new FontAwesome.Sharp.IconButton();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTenMon = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iBtnDSBxem = new FontAwesome.Sharp.IconButton();
+            this.btnShowFood = new FontAwesome.Sharp.IconButton();
             this.iBtnDSBsua = new FontAwesome.Sharp.IconButton();
             this.iBtnDSBxoa = new FontAwesome.Sharp.IconButton();
             this.iBtnDSBthem = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvFood = new System.Windows.Forms.DataGridView();
+            this.cbFoodCategory = new System.Windows.Forms.ComboBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFood)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtPrice);
+            this.panel1.Controls.Add(this.cbFoodCategory);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.iBtnTDcafe);
-            this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtTenMon);
+            this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -134,13 +134,6 @@
             this.iBtnTDcafe.TabIndex = 9;
             this.iBtnTDcafe.UseVisualStyleBackColor = false;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(91, 425);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(182, 22);
-            this.textBox4.TabIndex = 8;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -151,26 +144,20 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Giá:";
             // 
-            // textBox3
+            // txtTenMon
             // 
-            this.textBox3.Location = new System.Drawing.Point(91, 382);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(182, 22);
-            this.textBox3.TabIndex = 6;
+            this.txtTenMon.Location = new System.Drawing.Point(91, 332);
+            this.txtTenMon.Name = "txtTenMon";
+            this.txtTenMon.Size = new System.Drawing.Size(182, 22);
+            this.txtTenMon.TabIndex = 5;
             // 
-            // textBox2
+            // txtID
             // 
-            this.textBox2.Location = new System.Drawing.Point(91, 332);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 22);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(91, 278);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 22);
-            this.textBox1.TabIndex = 4;
+            this.txtID.Location = new System.Drawing.Point(91, 278);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(182, 22);
+            this.txtID.TabIndex = 4;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // label4
             // 
@@ -216,7 +203,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.iBtnDSBxem);
+            this.panel2.Controls.Add(this.btnShowFood);
             this.panel2.Controls.Add(this.iBtnDSBsua);
             this.panel2.Controls.Add(this.iBtnDSBxoa);
             this.panel2.Controls.Add(this.iBtnDSBthem);
@@ -226,24 +213,25 @@
             this.panel2.Size = new System.Drawing.Size(623, 68);
             this.panel2.TabIndex = 2;
             // 
-            // iBtnDSBxem
+            // btnShowFood
             // 
-            this.iBtnDSBxem.BackColor = System.Drawing.Color.SkyBlue;
-            this.iBtnDSBxem.FlatAppearance.BorderSize = 0;
-            this.iBtnDSBxem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iBtnDSBxem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iBtnDSBxem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.iBtnDSBxem.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iBtnDSBxem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.iBtnDSBxem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iBtnDSBxem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iBtnDSBxem.Location = new System.Drawing.Point(453, 6);
-            this.iBtnDSBxem.Name = "iBtnDSBxem";
-            this.iBtnDSBxem.Size = new System.Drawing.Size(118, 54);
-            this.iBtnDSBxem.TabIndex = 3;
-            this.iBtnDSBxem.Text = "Xem";
-            this.iBtnDSBxem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iBtnDSBxem.UseVisualStyleBackColor = false;
+            this.btnShowFood.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnShowFood.FlatAppearance.BorderSize = 0;
+            this.btnShowFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnShowFood.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnShowFood.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnShowFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnShowFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShowFood.Location = new System.Drawing.Point(453, 6);
+            this.btnShowFood.Name = "btnShowFood";
+            this.btnShowFood.Size = new System.Drawing.Size(118, 54);
+            this.btnShowFood.TabIndex = 3;
+            this.btnShowFood.Text = "Xem";
+            this.btnShowFood.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnShowFood.UseVisualStyleBackColor = false;
+            this.btnShowFood.Click += new System.EventHandler(this.btnShowFood_Click);
             // 
             // iBtnDSBsua
             // 
@@ -302,22 +290,38 @@
             this.iBtnDSBthem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iBtnDSBthem.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvFood
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 68);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(623, 525);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvFood.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFood.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFood.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFood.Location = new System.Drawing.Point(0, 68);
+            this.dgvFood.Name = "dgvFood";
+            this.dgvFood.Size = new System.Drawing.Size(623, 525);
+            this.dgvFood.TabIndex = 3;
+            // 
+            // cbFoodCategory
+            // 
+            this.cbFoodCategory.FormattingEnabled = true;
+            this.cbFoodCategory.Location = new System.Drawing.Point(91, 382);
+            this.cbFoodCategory.Name = "cbFoodCategory";
+            this.cbFoodCategory.Size = new System.Drawing.Size(182, 24);
+            this.cbFoodCategory.TabIndex = 11;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(91, 432);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(182, 22);
+            this.txtPrice.TabIndex = 12;
             // 
             // Thucdon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 593);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvFood);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Thucdon";
@@ -327,7 +331,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFood)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -335,25 +339,25 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTenMon;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton iBtnDSBxem;
+        private FontAwesome.Sharp.IconButton btnShowFood;
         private FontAwesome.Sharp.IconButton iBtnDSBsua;
         private FontAwesome.Sharp.IconButton iBtnDSBxoa;
         private FontAwesome.Sharp.IconButton iBtnDSBthem;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.DataGridView dgvFood;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
         private FontAwesome.Sharp.IconButton iBtnTDcafe;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox cbFoodCategory;
+        private System.Windows.Forms.TextBox txtPrice;
     }
 }

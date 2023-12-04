@@ -347,3 +347,5 @@ BEGIN
 	WHERE DateCheckIn >= @checkIn AND DateCheckOut <= @checkOut AND b.status = 1 AND t.id = b.idTable 
 END
 GO
+
+Select * from Account
