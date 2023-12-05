@@ -33,6 +33,21 @@ namespace QuanLyQuanCafe.DAO
             return list;
         }
 
+        // tim kiem phai dung (fix sau nay)
+        public List<Food> SearchFoodByName(string name)
+        {
+            List<Food> list = new List<Food>();
+
+            string query = string.Format("SELECT * FROM Food where name like N'%{0}%'", name);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in data.Rows)
+            {
+                Food food = new Food(row);
+                list.Add(food);
+            }
+            return list;
+        }
+
         public List<Food> GetListFood()
         {
             List<Food> list = new List<Food>();

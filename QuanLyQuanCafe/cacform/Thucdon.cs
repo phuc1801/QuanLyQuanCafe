@@ -53,25 +53,43 @@ namespace QuanLyQuanCafe
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
-            if(dgvFood.SelectedCells.Count > 0)
+            try
             {
-                int id = (int)dgvFood.SelectedCells[0].OwningRow.Cells["CategoryID"].Value;               
-                Category category = CategoryDAO.Instance.GetCategoryByID(id);
-                cbFoodCategory.SelectedItem = category;
-
-                int index = -1;
-                int i = 0;
-                foreach(Category item in cbFoodCategory.Items)
+                if (dgvFood.SelectedCells.Count > 0 &&
+                    dgvFood.SelectedCells[0].OwningRow != null &&
+                    dgvFood.SelectedCells[0].OwningRow.Cells["CategoryID"] != null &&
+                    dgvFood.SelectedCells[0].OwningRow.Cells["CategoryID"].Value != null)
                 {
-                    if(item.ID == category.ID)
+                    int id = (int)dgvFood.SelectedCells[0].OwningRow.Cells["CategoryID"].Value;
+
+                    Category cateogory = CategoryDAO.Instance.GetCategoryByID(id);
+
+                    if (cateogory != null)
                     {
-                        index = i; break;
+                        cbFoodCategory.SelectedItem = cateogory;
+
+                        int index = -1;
+                        int i = 0;
+                        foreach (Category item in cbFoodCategory.Items)
+                        {
+                            if (item.ID == cateogory.ID)
+                            {
+                                index = i;
+                                break;
+                            }
+                            i++;
+                        }
+
+                        cbFoodCategory.SelectedIndex = index;
                     }
-                    i++;
                 }
-                cbFoodCategory.SelectedIndex = index;
             }
-            
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ
+            }
+
+
         }
 
         private void iBtnDSBthem_Click(object sender, EventArgs e)
@@ -122,6 +140,18 @@ namespace QuanLyQuanCafe
             {
                 MessageBox.Show("Có lỗi khi Xoá món ăn");
             }
+        }
+
+
+        List<Food> SearchFoodByName(string name)
+        {
+            List<Food> listFood = FoodDAO.Instance.SearchFoodByName(name);
+
+            return listFood;
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            foodList.DataSource = SearchFoodByName(txtSearchFood.Text);
         }
     }
 }

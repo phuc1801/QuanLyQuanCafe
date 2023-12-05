@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.cbFoodCategory = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.iBtnTDcafe = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTenMon = new System.Windows.Forms.TextBox();
@@ -47,8 +48,7 @@
             this.iBtnDSBxoa = new FontAwesome.Sharp.IconButton();
             this.iBtnDSBthem = new FontAwesome.Sharp.IconButton();
             this.dgvFood = new System.Windows.Forms.DataGridView();
-            this.cbFoodCategory = new System.Windows.Forms.ComboBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtSearchFood = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,12 +58,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtSearchFood);
             this.panel1.Controls.Add(this.txtPrice);
             this.panel1.Controls.Add(this.cbFoodCategory);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.iBtnTDcafe);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtTenMon);
@@ -78,6 +78,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(295, 593);
             this.panel1.TabIndex = 1;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(91, 432);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(182, 22);
+            this.txtPrice.TabIndex = 12;
+            // 
+            // cbFoodCategory
+            // 
+            this.cbFoodCategory.FormattingEnabled = true;
+            this.cbFoodCategory.Location = new System.Drawing.Point(91, 382);
+            this.cbFoodCategory.Name = "cbFoodCategory";
+            this.cbFoodCategory.Size = new System.Drawing.Size(182, 24);
+            this.cbFoodCategory.TabIndex = 11;
             // 
             // pictureBox2
             // 
@@ -99,26 +114,20 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // btnSearch
             // 
-            this.button2.BackColor = System.Drawing.Color.SkyBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(207, 94);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Tìm";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(63, 95);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(138, 22);
-            this.textBox5.TabIndex = 10;
+            this.btnSearch.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSearch.Location = new System.Drawing.Point(207, 94);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(66, 23);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "Tìm";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // iBtnTDcafe
             // 
@@ -304,20 +313,13 @@
             this.dgvFood.Size = new System.Drawing.Size(623, 525);
             this.dgvFood.TabIndex = 3;
             // 
-            // cbFoodCategory
+            // txtSearchFood
             // 
-            this.cbFoodCategory.FormattingEnabled = true;
-            this.cbFoodCategory.Location = new System.Drawing.Point(91, 382);
-            this.cbFoodCategory.Name = "cbFoodCategory";
-            this.cbFoodCategory.Size = new System.Drawing.Size(182, 24);
-            this.cbFoodCategory.TabIndex = 11;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(91, 432);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(182, 22);
-            this.txtPrice.TabIndex = 12;
+            this.txtSearchFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchFood.Location = new System.Drawing.Point(72, 95);
+            this.txtSearchFood.Name = "txtSearchFood";
+            this.txtSearchFood.Size = new System.Drawing.Size(119, 22);
+            this.txtSearchFood.TabIndex = 13;
             // 
             // Thucdon
             // 
@@ -355,12 +357,12 @@
         private FontAwesome.Sharp.IconButton iBtnDSBthem;
         private System.Windows.Forms.DataGridView dgvFood;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
         private FontAwesome.Sharp.IconButton iBtnTDcafe;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ComboBox cbFoodCategory;
         private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtSearchFood;
     }
 }
