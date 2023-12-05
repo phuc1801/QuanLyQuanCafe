@@ -31,8 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTenDM = new System.Windows.Forms.TextBox();
+            this.txtIDDM = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,20 +41,20 @@
             this.iBtnDSBsua = new FontAwesome.Sharp.IconButton();
             this.iBtnDSBxoa = new FontAwesome.Sharp.IconButton();
             this.iBtnDSBthem = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDanhMuc = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMuc)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtTenDM);
+            this.panel1.Controls.Add(this.txtIDDM);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -84,19 +84,19 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox2
+            // txtTenDM
             // 
-            this.textBox2.Location = new System.Drawing.Point(117, 292);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtTenDM.Location = new System.Drawing.Point(117, 292);
+            this.txtTenDM.Name = "txtTenDM";
+            this.txtTenDM.Size = new System.Drawing.Size(162, 20);
+            this.txtTenDM.TabIndex = 5;
             // 
-            // textBox1
+            // txtIDDM
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 217);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtIDDM.Location = new System.Drawing.Point(117, 217);
+            this.txtIDDM.Name = "txtIDDM";
+            this.txtIDDM.Size = new System.Drawing.Size(162, 20);
+            this.txtIDDM.TabIndex = 4;
             // 
             // label4
             // 
@@ -162,6 +162,7 @@
             this.iBtnDSBxem.Text = "Xem";
             this.iBtnDSBxem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iBtnDSBxem.UseVisualStyleBackColor = false;
+            this.iBtnDSBxem.Click += new System.EventHandler(this.iBtnDSBxem_Click);
             // 
             // iBtnDSBsua
             // 
@@ -181,6 +182,7 @@
             this.iBtnDSBsua.Text = "Sửa";
             this.iBtnDSBsua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iBtnDSBsua.UseVisualStyleBackColor = false;
+            this.iBtnDSBsua.Click += new System.EventHandler(this.iBtnDSBsua_Click);
             // 
             // iBtnDSBxoa
             // 
@@ -200,6 +202,7 @@
             this.iBtnDSBxoa.Text = "Xoá";
             this.iBtnDSBxoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iBtnDSBxoa.UseVisualStyleBackColor = false;
+            this.iBtnDSBxoa.Click += new System.EventHandler(this.iBtnDSBxoa_Click);
             // 
             // iBtnDSBthem
             // 
@@ -219,23 +222,25 @@
             this.iBtnDSBthem.Text = "Thêm";
             this.iBtnDSBthem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iBtnDSBthem.UseVisualStyleBackColor = false;
+            this.iBtnDSBthem.Click += new System.EventHandler(this.iBtnDSBthem_Click);
             // 
-            // dataGridView1
+            // dgvDanhMuc
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 81);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(623, 512);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvDanhMuc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhMuc.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvDanhMuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhMuc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDanhMuc.Location = new System.Drawing.Point(0, 81);
+            this.dgvDanhMuc.Name = "dgvDanhMuc";
+            this.dgvDanhMuc.Size = new System.Drawing.Size(623, 512);
+            this.dgvDanhMuc.TabIndex = 4;
             // 
             // Danhmuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 593);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDanhMuc);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Danhmuc";
@@ -245,7 +250,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMuc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,8 +260,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTenDM;
+        private System.Windows.Forms.TextBox txtIDDM;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -265,6 +270,6 @@
         private FontAwesome.Sharp.IconButton iBtnDSBsua;
         private FontAwesome.Sharp.IconButton iBtnDSBxoa;
         private FontAwesome.Sharp.IconButton iBtnDSBthem;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDanhMuc;
     }
 }

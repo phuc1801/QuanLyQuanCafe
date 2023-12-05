@@ -30,7 +30,12 @@ namespace QuanLyQuanCafe
                 frmTableManager f = new frmTableManager(loginAccount);
                 this.Hide();
                 f.ShowDialog();
-                this.Show();
+                try
+                {
+                    this.Show();
+                }
+                catch { }
+                
             }
             else
             {

@@ -33,7 +33,7 @@ namespace QuanLyQuanCafe
             txtUserName.DataBindings.Add("Text", dgvAccount.DataSource, "UserName", true, DataSourceUpdateMode.Never);
             txtDisplayName.DataBindings.Add("Text", dgvAccount.DataSource, "DisplayName", true, DataSourceUpdateMode.Never);
             txtType.DataBindings.Add("Text", dgvAccount.DataSource, "Type", true, DataSourceUpdateMode.Never);
-           // txtMatKhau.DataBindings.Add("Text", dgvAccount.DataSource, "PassWord", true, DataSourceUpdateMode.Never);
+            txtMatKhau.DataBindings.Add("Text", dgvAccount.DataSource, "PassWord", true, DataSourceUpdateMode.Never);
             
         }
 
@@ -100,9 +100,9 @@ namespace QuanLyQuanCafe
             loadAccount();
         }
 
-        void ThaydoiAccount(string passWord)
+        void ThaydoiAccount(string passWord, string mk)
         {
-            if (AccountDAO.Instance.ChangePass(passWord))
+            if (AccountDAO.Instance.ChangePass(passWord, mk))
             {
                 MessageBox.Show("Thay đổi tài khoản thành công");
             }
@@ -140,9 +140,9 @@ namespace QuanLyQuanCafe
         
         private void btnCapNhap_Click(object sender, EventArgs e)
         {
-            //string passWord = txtPassWord.Text;
-
-            //ThaydoiAccount(passWord);
+            string passWord = txtMatKhau.Text;
+            string userName = txtUserName.Text;
+            ThaydoiAccount(userName,passWord);
         }
     }
 }

@@ -39,7 +39,7 @@ namespace QuanLyQuanCafe.DAO
 
         public DataTable getListAccount()
         {
-            return DataProvider.Instance.ExecuteQuery("Select UserName, DisplayName, Type from Account");
+            return DataProvider.Instance.ExecuteQuery("Select UserName, DisplayName, Type, PassWord from Account");
         }
 
 
@@ -71,9 +71,10 @@ namespace QuanLyQuanCafe.DAO
         }
 
 
-        public bool ChangePass(string name)
+        public bool ChangePass(string name, string mk)
         {
-            string query = string.Format("Update Account set PassWord = N'0' where UserName = N'{0}'", name);
+            
+            string query = string.Format("Update Account set PassWord = N'{1}' where UserName = N'{0}'", name, mk);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
