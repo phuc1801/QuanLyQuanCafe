@@ -368,3 +368,5 @@ BEGIN
 		UPDATE TableFood SET status = N'Trống' WHERE id = @idTable
 END
 GO
+
+Select UserName, DisplayName, Type from Account
