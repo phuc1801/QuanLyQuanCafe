@@ -41,6 +41,8 @@ namespace QuanLyQuanCafe
             cb.DisplayMember = "Name";
         }
 
+        
+
         void loadListFood()
         {
             foodList.DataSource = FoodDAO.Instance.GetListFood();
