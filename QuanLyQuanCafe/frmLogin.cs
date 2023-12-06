@@ -18,6 +18,7 @@ namespace QuanLyQuanCafe
         public frmLogin()
         {
             InitializeComponent();
+           
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -53,5 +54,19 @@ namespace QuanLyQuanCafe
         {
             Application.Exit();
         }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chkShowPassword.Checked == true)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar= true;
+            }
+        }
+
+        
     }
 }

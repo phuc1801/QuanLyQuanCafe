@@ -25,6 +25,7 @@ namespace QuanLyQuanCafe
             dgvAccount.DataSource = accountList;
             addAcountBinding();
             loadAccount();
+           
         }
 
       
@@ -144,5 +145,7 @@ namespace QuanLyQuanCafe
             string userName = txtUserName.Text;
             ThaydoiAccount(userName,passWord);
         }
+
+        
     }
 }

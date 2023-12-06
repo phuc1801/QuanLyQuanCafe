@@ -79,5 +79,7 @@ namespace QuanLyQuanCafe.DAO
 
             return result > 0;
         }
+
+       
     }
 }
