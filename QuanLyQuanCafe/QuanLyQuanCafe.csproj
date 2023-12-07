@@ -144,6 +144,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTableManager.resx">
       <DependentUpon>frmTableManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
