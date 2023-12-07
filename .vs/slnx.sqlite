@@ -3374,7 +3374,4 @@ B
 
 
 
-int t, t100, t20, t5;
-  clrscr ();
-  printf ("Nhap so tien t=");
-  scanf ("%d", &t);
+
